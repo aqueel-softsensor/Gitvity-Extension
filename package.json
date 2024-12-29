@@ -2,7 +2,7 @@
   "name": "gitivity",
   "displayName": "Gitivity",
   "description": "GitHub Productivity Tracker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "SmallUpAI",
   "repository": {
     "type": "git",
@@ -12,7 +12,27 @@
     "vscode": "^1.96.0"
   },
   "categories": [
-    "Other"
+    "AI",
+    "Programming Languages",
+    "Source Control",
+    "Productivity",
+    "Utilities"
+  ],
+  "keywords": [
+    "Git",
+    "GitHub",
+    "productivity",
+    "tracker",
+    "summarization",
+    "logs",
+    "automation",
+    "repository",
+    "vscode-extension",
+    "file-tracking",
+    "developer-tools",
+    "git-integration",
+    "file-activity",
+    "work-logs"
   ],
   "main": "./out/extension.js",
   "activationEvents": [
