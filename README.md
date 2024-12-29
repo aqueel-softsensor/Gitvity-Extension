@@ -1,6 +1,4 @@
 
-Here's your updated `README.md`:
-
 ---
 
 # Gitivity: A GitHub Productivity Tracker Extension for VS Code
