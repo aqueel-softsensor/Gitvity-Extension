@@ -2,7 +2,7 @@
   "name": "gitivity",
   "displayName": "Gitivity",
   "description": "GitHub Productivity Tracker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "SmallUpAI",
   "repository": {
     "type": "git",
