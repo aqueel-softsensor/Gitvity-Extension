@@ -268,7 +268,7 @@ ${detailedLog}`
     };
 
     // Periodically update the log file and push to GitHub
-    const intervalMinutes = 0.5; // Configurable interval in minutes
+    const intervalMinutes = 30; // Configurable interval in minutes
     setInterval(async () => {
         if (fileActivities.length > 0) {
             console.log('Updating logs...');
