@@ -1,75 +1,133 @@
-<<<<<<< HEAD
-# gitivity README
 
-This is the README for your extension "gitivity". After writing up a brief description, we recommend including the following sections.
+# Gitivity: A GitHub Productivity Tracker Extension for VS Code
+
+## Description
+
+Gitivity is a VS Code extension that boosts your productivity by monitoring file changes in your workspace and providing concise work logs and summaries. It helps developers track their progress efficiently by logging file modifications, creations, and deletions, with an optional integration to summarize these changes using the Groq API.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Automatic Work Log Generation**:
+  - Tracks file modifications, creations, and deletions.
+  - Generates work logs with human-readable timestamps for better traceability.
+- **Groq Summarization Integration**:
+  - Summarizes work logs to provide concise insights into development progress.
+- **GitHub Repository Creation**:
+  - Easily create private GitHub repositories directly from VS Code.
+- **Customizable Log Interval**:
+  - Configure the log update interval through VS Code settings.
+- **Localized Logs**:
+  - Displays logs with local computer time for better understanding.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Ensure you have the following prerequisites:
+   - Visual Studio Code v1.96.0 or higher
+   - Node.js and npm installed
+   - A GitHub Personal Access Token (PAT) with `repo` permissions
+2. Install the extension:
+   - Download the `.vsix` file of this extension.
+   - Open VS Code and install it via `Extensions > Install from VSIX...`.
+3. Authenticate with your Groq API key (optional for summarization):
+   - Enter your Groq API key in the input box when prompted.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
 
-## Requirements
+### Work Log Generation
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Open a workspace folder in VS Code.
+- The extension automatically tracks file activities and logs them in a `log.txt` file within the workspace.
+- Logs include file names, actions (modified, created, deleted), and timestamps.
 
-## Extension Settings
+### File Summarization
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- If a Groq API key is provided, summaries of the work logs will be appended to the `log.txt` file.
+- Summaries do not include suggestions or recommendations, ensuring a concise description of work activities.
 
-For example:
+### GitHub Repository Creation
 
-This extension contributes the following settings:
+- Trigger the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+- Run the `Gitivity: Create GitHub Repository` command.
+- The extension uses your authenticated GitHub session to create a private repository.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Commands
 
-## Known Issues
+| Command                                | Description                                 |
+| -------------------------------------- | ------------------------------------------- |
+| `Gitivity: Create GitHub Repository` | Creates a new private repository on GitHub. |
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Configuration
 
-## Release Notes
+### Settings
 
-Users appreciate release notes as you update your extension.
+- **Log Update Interval**:
+  Configure the interval at which logs are updated. This can be done by updating the extension settings in the VS Code settings menu.
 
-### 1.0.0
+### Environment Variables
 
-Initial release of ...
+- **GitHub Authentication**:
+  Ensure you are authenticated with GitHub in VS Code to enable repository creation.
+- **Groq API Key**:
+  Add your API key when prompted to enable summarization features.
 
-### 1.0.1
+## File Structure
 
-Fixed issue #.
+```
+.
+├── src/
+│   ├── extension.ts         # Main extension logic
+│   ├── testCompile.ts       # Auxiliary logic
+│   └── test/                # Test files
+├── out/                     # Compiled files
+├── node_modules/            # Dependencies
+├── package.json             # Extension metadata and dependencies
+├── tsconfig.json            # TypeScript configuration
+├── README.md                # Project documentation
+└── log.txt                  # Automatically generated work logs
+```
 
-### 1.1.0
+## Development
 
-Added features X, Y, and Z.
+### Prerequisites
+
+- Install dependencies:
+  ```bash
+  npm install
+  ```
+- Compile the TypeScript files:
+  ```bash
+  npm run compile
+  ```
+
+### Testing
+
+- Run tests using the following command:
+  ```bash
+  npm test
+  ```
+
+### Packaging
+
+- Package the extension into a `.vsix` file:
+  ```bash
+  vsce package
+  ```
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
 
 ---
 
-## Following extension guidelines
+## Contact
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
-=======
-# Gitvity-Extension
->>>>>>> 2287225d217f1a6056d3e80c7dd7570a25ee014c
+For support or feedback, please open an issue in the [GitHub repository](https://github.com/aqueel-softsensor/Gitvity-Extension).

@@ -1,11 +1,28 @@
-.vscode/**
-.vscode-test/**
-src/**
-.gitignore
-.yarnrc
+# Ignore all node_modules except required dependencies
+node_modules/**
+!node_modules/axios/**
+!node_modules/groq-sdk/**
+
+# Ignore TypeScript build info and unnecessary files
+*.tsbuildinfo
+
+# Include compiled output directory but exclude unwanted files
+!out/
+out/**/*.map
+
+# Ignore test files
+test/
+src/test/
+*.test.ts
+*.spec.ts
+
+# Ignore local configuration files
+*.env
+.vscode/
+*.log
+*.tmp
+*.mjs
+
+# Ignore documentation and non-essential files
+CHANGELOG.md
 vsc-extension-quickstart.md
-**/tsconfig.json
-**/eslint.config.mjs
-**/*.map
-**/*.ts
-**/.vscode-test.*

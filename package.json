@@ -3,6 +3,11 @@
   "displayName": "Gitivity",
   "description": "GitHub Productivity Tracker",
   "version": "0.0.1",
+  "publisher": "SmallUpAI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aqueel-softsensor/Gitvity-Extension.git"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -25,8 +30,8 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "compile": "webpack",
+    "watch": "webpack --watch",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
     "test": "vscode-test"
@@ -40,7 +45,10 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.16.0",
-    "typescript": "^5.7.2"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
     "axios": "^1.7.9",
